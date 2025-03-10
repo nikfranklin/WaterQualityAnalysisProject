@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 
 data =  np.genfromtxt("BKB_WaterQualityData_2020084.csv",
                             skip_header=1, skip_footer=3, delimiter=",", usecols=(2,3,6),
@@ -36,7 +35,5 @@ ax_sec.set_xlabel("Report Date")
 ax_sec.tick_params(axis='x', rotation=45,)
 ax_sec.set_ylabel("Secchi Depth (m)")
 
-#for i in data:
-#print(i)
 plt.tight_layout
 fig.savefig("test.png")
